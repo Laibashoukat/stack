@@ -1,0 +1,95 @@
+#include<iostream>
+using namespace std;
+
+
+int arr[5],n=5,top=-1;
+void push(int a){
+	
+	
+	if (top>=n-1){
+		cout<<"Stack is full ";
+	}
+	else {
+		top++;
+		arr[top]=a;
+	}
+
+	
+}
+
+void pop(){
+	if (top<=-1){
+		cout<<"stack is empyt"<<endl;
+					}
+	else{
+		cout<<"pop element is  "<<arr[top]<<endl;
+		top--;
+		
+	}
+	
+}
+
+void dis(){
+	if(top>=0){
+		for(int i=0;i<=top; i++){
+			cout<<arr[i]<<" ";
+			
+		}
+		cout<<endl;
+	}
+	else {
+		cout<<"stack is empty "<<endl;
+	}
+}
+
+
+int main(){
+	int ch ,a;
+	char c;
+	
+	do{
+		cout<<"1. Push"<<endl;
+	cout<<"2. Pop "<<endl;
+	cout<<"3. display"<<endl;
+	cout<<"4. exit"<<endl;
+		cout<<"Enter choise   "<<endl;
+	cin>>ch;
+	switch(ch){
+		case 1:
+			do{
+		
+			cout<<"enter an element "<<endl;
+			cin>>a;
+			push(a);
+			 cout<<"DO you want to add other element  y/n ";
+			 cin>>c;
+}
+while(c!='n');
+	       break;
+	    case 2:
+	    	do {
+	    		
+			pop();
+			cout<<"DO you want to pop other element  y/n ";
+			 cin>>c;
+}
+while(c!='n');
+
+	    	break;
+	    case 3:
+	     dis();
+		 break;
+
+	}
+	
+	
+	
+}
+while(ch!=4);
+
+
+
+
+	
+	
+}
